@@ -1,0 +1,18 @@
+Thanks for using FirstLaunch API!  I hope this API helps you!  I would like to make a list of applications that are using the API.  So if you have an app on the App Store, that uses this API let me know by sending your app details to cf80210@gmail.com
+
+To import the API into your app:
+1. Drag the FirstLaunch.h and FirstLaunch.m files into your project.  Use the default settings.
+2. At the top of your class that you want to use FirstLaunch API with, #import "FirstLaunch.h"
+3. Thats it!
+
+To Read if its the First Launch:
+1. Find the method where you would like to read the first launch.
+2. Add the line of code to the method FirstLaunch *fl = [[FirstLaunch alloc] init];
+3. Get the BOOL of First Launch if the bool if NOT FALSE then it is the first launch, else its not the first launch.  BOOL isFL = [fl isFirstLaunch];
+4. At the end you know that the user is in your app so write the line of code to make sure that the API knows the user has entered your app.  [fl setFirstLaunch:FALSE];
+
+To set the first launch to a setting:
+1. This is useful to reset a game from the beginning.
+2. In the method that you want to reset the First Launch set up the First Launch by adding this line of code: FirstLaunch *fl = [[FirstLaunch alloc] init];
+3. Set the FirstLaunch by adding this line of code: [fl setFirstLaunch:TRUE];
+4. Not false is First Launch, else its not the first launch
